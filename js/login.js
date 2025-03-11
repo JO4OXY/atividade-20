@@ -18,9 +18,11 @@ async function autenticar(e) {
     email: document.getElementById('id_do_input_do_email').value,
     senha: document.getElementById('id_do_input_do_senha').value
   };
+  
+  console.log(dados.senha)
 
   // Define a URL da API que processará a autenticação
-  const url = "https://atividade-18.vercel.app/login";
+  const url = "https://atividade-18-alpha.vercel.app/login";
 
   try {
     // Envia uma requisição HTTP POST para a API com os dados do usuário
@@ -44,7 +46,7 @@ async function autenticar(e) {
     localStorage.setItem('jwt', data.token);
 
     // Exibe uma mensagem de sucesso na interface do usuário em verde juntamente com o Token gerado
-    window.location.href = 'login.html';
+    window.location.href = 'home.html';
     
   } catch (error) {
     // Exibe uma mensagem de erro na interface do usuário em vermelho
